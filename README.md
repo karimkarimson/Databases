@@ -35,3 +35,19 @@ Here are a few commands for SQL:
 > Here is an example:
 > > `SELECT * FROM students`
 > This query will retrieve all data from the _students_ table
+> **SQL** is case insensitive, though it is *best practices* to write all commands and names in **CAPITAL LETTERS**
+
+
+### NoSQL Databases
+Are DBs that store data in different models, such as:
++ **document**
++ **key-value**
++ **graph**
+
+##### Document DBs
+Store data as Documents, typically JSON or BSON format, where each document represents a single record with flexible schema
+##### Key-Value Stores
+Store data as a collection of *key-value pairs*, like a dictionary or hash-table. They are very fast and scalable, which makes them the prefered DB for caching, session-management and user preferences.
+##### Graph DBs
+Store data as *nodes* and *edges* in a graph, allowing for complex relationships to be modeled and queried.
+> Need specialized knowledge and tools
