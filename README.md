@@ -33,5 +33,5 @@ Here are a few commands for SQL:
 
 
 > Here is an example:
-> > **SELECT** \* **FROM** students
+> > `SELECT * FROM students`
 > This query will retrieve all data from the _students_ table
