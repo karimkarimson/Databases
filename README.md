@@ -51,3 +51,76 @@ Store data as a collection of *key-value pairs*, like a dictionary or hash-table
 ##### Graph DBs
 Store data as *nodes* and *edges* in a graph, allowing for complex relationships to be modeled and queried.
 > Need specialized knowledge and tools
+
+
+
+> ## Unterrichtsnotizen
+> + Entität
+> > + der Spaltentitel
+> + Klassen
+> + Attribut
+>> + _Primary Key_
+>> + Attribute können bestimmte Datensätze Kennzeichnen
+
+> #### Beziehungen
+>> + `1 : 1`
+>>> + 1 Schüler hat 1 Zeugnis
+>>> + Kunde : Passwort
+>> + `1 : n`
+>>> + 1e Klasse besteht aus n Schülern
+>> + `n : m`
+>>> 1 Schüler hat mehrere Lehrer : 1 Lehrer unterrichtet mehrere Schüler
+
+> + Relationale DBs
+> > + jede Zeile in der Datenbank ist ein sog. **Tupel**
+> > + die Zeile beginnt mit dem **Primary Key / ID**
+> > + weitere _Spalten_ können **Fremdschlüssel** enthalten, die wiederum auf andere Datenbanken zugehörig sind
+
+
+> ### Normalisierung von Daten /  Bildung von Normalformen
+> Ressource: [wiki][norm]
+> > #### 1. Normalform / 1NF
+>>> + Jedes **Attribut** hat einfache **Attributwerte**
+>>> + Attributswerte lassen sich nicht weiter zerlegen
+> > #### 2. Normalform / 2NF
+>>> + Jedes Attribut hat einfache Attributwerte
+>>> + Jeder Attributwert ist vom Schlüsselattribut abhängig
+>>> + Schlüsselattribute sind eindeutig
+> > #### 3. Normalform / 3NF
+>>> + Wie 2NF doch mit transitiven Abhängigkeiten der Attribute
+>>> + _transitive Abhängigkeiten_: Attributswerte können Primärschlüssel anderer Datenbanktabellen sein
+
+>> + redundante Datenspeicherung - Speicherung sich wiederholender Daten/Attribute
+
+> ### SQL
+>> #### Datentypen
+>>> + _tinyInt_: 256 NZahlen ohne VZ
+>>> + _double_: Kommazahlen
+>>> + _varchar_: 
+>> #### DML / DDL / DCL
+>>> ##### DML Data Manipulation Language
+>>>> + _Veränderung der Tabelleninhalte_
+>>>> + `UPDATE`
+>>>> + `SELECT`
+
+>>> ##### DDL Data Definition Language
+>>>> + definition der Tabellen
+>>>> + `CREATE TABLE`- Statements mit **Primary_Key** und _Attributen_
+>>>> + definiert Datentypen die verwendet werden
+>>>> + setzt Bedingungen für Attribute (zB. NOT NULL)
+>>>> + `ALTER TABLE`
+>>>> + `DROP TABLE`
+
+>>> ##### DCL Data Control Language
+>>>> + SYNTAX um Zugangsberechtigungen zu setzen
+>>>> + `GRANT SELECT, UPDATE ON TABLE [dbo].[FIRMA] TO SYSUSER;`
+>>>> + Sysuser darf SELECT und UPDATE auf dbo.firma-Tabelle
+>>>> + `REVOKE SELECT, UPDATE ON TABLE [dbo].* TO SYSUSER`
+
+
+
+
+
+
+LINKS:
+[norm]: https://de.wikipedia.org/wiki/Normalisierung
