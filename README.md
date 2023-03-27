@@ -96,7 +96,7 @@ Store data as *nodes* and *edges* in a graph, allowing for complex relationships
 >> #### Datentypen
 >>> + _tinyInt_: 256 NZahlen ohne VZ
 >>> + _double_: Kommazahlen
->>> + _varchar_: 
+>>> + _varchar_: String einer bestimmten Länge
 >> #### DML / DDL / DCL
 >>> ##### DML Data Manipulation Language
 >>>> + _Veränderung der Tabelleninhalte_
@@ -117,6 +117,18 @@ Store data as *nodes* and *edges* in a graph, allowing for complex relationships
 >>>> + Sysuser darf SELECT und UPDATE auf dbo.firma-Tabelle
 >>>> + `REVOKE SELECT, UPDATE ON TABLE [dbo].* TO SYSUSER`
 
+>> Praxis
+>>> siehe [MySQL-Dokumentation][mysqldoc]
+>>> für [Foreign_Key Statements][fkeystat]
+>>> CREATE TABLE
+>>>> {
+    CREATE TABLE TESTTABLE(
+        TRACK_ID INT NOT NULL,
+        TRACK_NAME VARCHAR(30)
+        ARTISTS_NAMES VARCHAR(30)
+        FOREIGN KEY (ALBUM) REFERENCES Album(ALBUM)
+    )
+}
 
 
 
@@ -124,3 +136,5 @@ Store data as *nodes* and *edges* in a graph, allowing for complex relationships
 
 LINKS:
 [norm]: https://de.wikipedia.org/wiki/Normalisierung
+[mysqldoc]: https://dev.mysql.com/doc/refman/8.0/en/create-table.html
+[fkeystat]: https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html
